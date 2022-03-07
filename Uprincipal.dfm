@@ -55,19 +55,12 @@ object formPrincipal: TformPrincipal
     Height = 21
     TabOrder = 1
   end
-  object Edit3: TEdit
-    Left = 200
-    Top = 56
-    Width = 121
-    Height = 21
-    TabOrder = 2
-  end
   object edtImc: TEdit
     Left = 200
     Top = 128
     Width = 121
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object Button1: TButton
     Left = 56
@@ -75,7 +68,7 @@ object formPrincipal: TformPrincipal
     Width = 75
     Height = 25
     Caption = 'Calcular'
-    TabOrder = 4
+    TabOrder = 3
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -84,6 +77,13 @@ object formPrincipal: TformPrincipal
     Width = 75
     Height = 25
     Caption = 'Enviar'
+    TabOrder = 4
+  end
+  object edtResposta: TEdit
+    Left = 200
+    Top = 56
+    Width = 193
+    Height = 21
     TabOrder = 5
   end
 end

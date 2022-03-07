@@ -10,7 +10,6 @@ type
   TformPrincipal = class(TForm)
     edtAltura: TEdit;
     edtPeso: TEdit;
-    Edit3: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -18,7 +17,9 @@ type
     edtImc: TEdit;
     Button1: TButton;
     Button2: TButton;
+    edtResposta: TEdit;
     procedure Button1Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -31,19 +32,16 @@ var
   altura: real;
   imc: real;
 
+
 implementation
 
 {$R *.dfm}
 
+uses classImc;
+
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
-altura := StrToCurr (edtAltura.Text);
-peso := strToCurr (edtPeso.Text);
-
-imc := peso/(altura*altura);
-
-edtImc.Text := currTostr (imc);
-
+  classImc.TImc;
 end;
 
 end.

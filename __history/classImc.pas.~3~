@@ -1,0 +1,37 @@
+unit classImc;
+
+interface
+
+type
+  TImc = class
+    altura: real;
+    peso: real;
+    imc: real;
+
+    procedure calculoImc;
+  end;
+
+implementation
+
+uses Uprincipal;
+
+procedure TImc.calculoImc;
+begin
+  altura :=  (formPrincipal.edtAltura.Text);
+peso := strToCurr (formPrincipal.edtPeso.Text);
+
+imc := peso/(altura*altura);
+
+formPrincipal.edtImc.Text := currTostr (imc);
+
+
+if imc > 20 then
+
+    formPrincipal.edtResposta.Text := ('Você Precisa Emagrecer!!')
+else
+
+    formPrincipal.edtResposta.Text := ('Seu peso é ideal!!') ;
+
+end;
+
+end.
