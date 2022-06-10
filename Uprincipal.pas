@@ -41,7 +41,9 @@ uses classImc;
 
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
-  classImc.TImc;
+
+peso:= edtPeso.Text;
+//imc := peso/(altura*altura);
 end;
 
 end.

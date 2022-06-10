@@ -2,7 +2,8 @@ program Prj.CalculoImc;
 
 uses
   Vcl.Forms,
-  Uprincipal in 'Uprincipal.pas' {formPrincipal};
+  Uprincipal in 'Uprincipal.pas' {formPrincipal},
+  classImc in 'classImc.pas';
 
 {$R *.res}
 
