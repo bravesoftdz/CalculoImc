@@ -17,7 +17,7 @@ uses Uprincipal;
 
 procedure TImc.calculoImc;
 begin
-  altura := StrToCurr (formPrincipal.edtAltura.Text);
+  altura := strToCurr (formPrincipal.edtAltura.Text);
 peso := strToCurr (formPrincipal.edtPeso.Text);
 
 imc := peso/(altura*altura);

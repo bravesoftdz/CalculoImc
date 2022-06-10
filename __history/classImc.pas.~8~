@@ -4,7 +4,7 @@ interface
 
 type
   TImc = class
-    altura: integer;
+    altura: float;
     peso: real;
     imc: real;
 
@@ -17,8 +17,8 @@ uses Uprincipal;
 
 procedure TImc.calculoImc;
 begin
-  altura := inttostr (formPrincipal.edtAltura.Text);
-peso := (formPrincipal.edtPeso.Text);
+  altura := (formPrincipal.edtAltura.Text);
+peso := strToCurr (formPrincipal.edtPeso.Text);
 
 imc := peso/(altura*altura);
 
