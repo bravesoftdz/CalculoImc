@@ -18,6 +18,8 @@ type
     Button1: TButton;
     Button2: TButton;
     edtResposta: TEdit;
+    procedure Button1Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -26,32 +28,25 @@ type
 
 var
   formPrincipal: TformPrincipal;
-  peso: real;
-  altura: real;
-  imc: real;
+  peso: integer;
+  altura: integer;
 
 
 implementation
 
 {$R *.dfm}
 
-procedure calcular;
 
+procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
-       altura := StrToCurr (edtAltura.Text);
-peso := strToCurr (edtPeso.Text);
 
-imc := peso/(altura*altura);
+peso:= strToInt(edtPeso.Text);
+altura := strToInt(edtAltura.Text);
 
-edtImc.Text := currTostr (imc);
+imc := (altura * altura)/ IntToStr(edtPeso.Text);
 
 
-if imc > 20 then
 
-    edtResposta.Text := ('Você Precisa Emagrecer!!')
-else
+end;
 
-    edtResposta.Text := ('Seu peso é ideal!!') ;
-
-     end;
 end.

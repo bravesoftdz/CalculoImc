@@ -28,22 +28,25 @@ type
 
 var
   formPrincipal: TformPrincipal;
-  peso: real;
-  altura: real;
-  imc: real;
+  imc: integer;
+  altura: integer;
 
 
 implementation
 
 {$R *.dfm}
 
-uses classImc;
 
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
 
-peso:= edtPeso.Text;
-//imc := peso/(altura*altura);
+
+altura := strToInt(edtAltura.Text);
+
+imc := (altura * altura)/ StrToInt(edtPeso.Text);
+
+
+
 end;
 
 end.
