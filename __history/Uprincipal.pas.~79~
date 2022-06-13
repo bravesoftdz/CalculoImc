@@ -28,10 +28,10 @@ type
 
 var
   formPrincipal: TformPrincipal;
-  peso: integer;
-  altura: integer;
-  calc: integer;
   imc: integer;
+  altura: integer;
+  peso: integer;
+  resultado: integer;
 
 
 implementation
@@ -42,11 +42,13 @@ implementation
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
 
-peso:= strToInt(edtPeso.Text);
-altura := strToInt(edtAltura.Text);
 
-calc := altura * altura;
-imc := calc / (peso);
+altura := strToInt(edtAltura.Text);
+peso := strToint (edtPeso.Text);
+
+imc := (altura * altura);
+resultado:= imc / peso;
+
 
 
 end;

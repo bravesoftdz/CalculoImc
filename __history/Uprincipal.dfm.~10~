@@ -3,8 +3,8 @@ object formPrincipal: TformPrincipal
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'C'#225'lculo IMC'
-  ClientHeight = 241
-  ClientWidth = 384
+  ClientHeight = 266
+  ClientWidth = 545
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -30,13 +30,13 @@ object formPrincipal: TformPrincipal
   end
   object Label3: TLabel
     Left = 191
-    Top = 60
+    Top = 47
     Width = 3
     Height = 13
   end
   object Label4: TLabel
-    Left = 191
-    Top = 82
+    Left = 200
+    Top = 109
     Width = 19
     Height = 13
     Caption = 'IMC'
@@ -55,13 +55,20 @@ object formPrincipal: TformPrincipal
     Height = 21
     TabOrder = 1
   end
+  object edtImc: TEdit
+    Left = 200
+    Top = 128
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
   object Button1: TButton
     Left = 56
     Top = 184
     Width = 75
     Height = 25
     Caption = 'Calcular'
-    TabOrder = 2
+    TabOrder = 3
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -70,15 +77,13 @@ object formPrincipal: TformPrincipal
     Width = 75
     Height = 25
     Caption = 'Enviar'
-    TabOrder = 3
-  end
-  object PnlImc: TPanel
-    Left = 191
-    Top = 101
-    Width = 106
-    Height = 22
-    Color = clHighlightText
-    ParentBackground = False
     TabOrder = 4
+  end
+  object edtResposta: TEdit
+    Left = 200
+    Top = 56
+    Width = 193
+    Height = 21
+    TabOrder = 5
   end
 end

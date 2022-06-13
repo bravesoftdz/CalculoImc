@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TformPrincipal = class(TForm)
@@ -14,10 +14,9 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    edtImc: TEdit;
     Button1: TButton;
     Button2: TButton;
-    edtResposta: TEdit;
+    PnlImc: TPanel;
     procedure Button1Click(Sender: TObject);
 
   private
@@ -28,8 +27,7 @@ type
 
 var
   formPrincipal: TformPrincipal;
-  imc: integer;
-  altura: integer;
+  peso, altura, imc: real;
 
 
 implementation
@@ -40,10 +38,14 @@ implementation
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
 
-peso:= strToInt(edtPeso.Text);
-altura := strToInt(edtAltura.Text);
 
-imc := (altura * altura)/ IntToStr(edtPeso.Text);
+altura := strToFloat (edtAltura.Text);
+peso := strToFloat (edtPeso.Text);
+
+imc := (altura * altura) / peso;
+
+PnlImc:= StrToFloat (imc);
+
 
 
 

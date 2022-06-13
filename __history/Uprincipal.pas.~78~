@@ -30,6 +30,7 @@ var
   formPrincipal: TformPrincipal;
   imc: integer;
   altura: integer;
+  peso: integer;
 
 
 implementation
@@ -42,8 +43,9 @@ begin
 
 
 altura := strToInt(edtAltura.Text);
+peso := strToint (edtPeso.Text);
 
-imc := (altura * altura)/ IntToStr(edtPeso.Text);
+imc := (altura * altura)/ strToInt(peso);
 
 
 
