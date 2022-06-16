@@ -42,9 +42,11 @@ begin
 altura := strToFloat (edtAltura.Text);
 peso := strToFloat (edtPeso.Text);
 
-imc := (altura * altura) / peso;
+imc := peso / (altura * altura);
 
-PnlImc.Caption:= FloatToStr (imc);
+PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
+
+
 
 
 
