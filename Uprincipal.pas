@@ -27,24 +27,23 @@ type
 
 var
   formPrincipal: TformPrincipal;
-  peso, altura, imc: real;
+
 
 
 implementation
 
 {$R *.dfm}
 
+uses UnitClassPrin;
+
 
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
 
 
-altura := strToFloat (edtAltura.Text);
-peso := strToFloat (edtPeso.Text);
 
-imc := peso / (altura * altura);
 
-PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
+//PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
 
 
 
