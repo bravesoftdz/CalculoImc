@@ -12,11 +12,12 @@ type ClassPrin = class
 
      constructor calculaImc;
 
-       procedure setImc(pImc: real);
+       procedure setAltura(pAltura: real);
+       procedure setPeso(pPeso: real);
 
 
-       function getAltura: real;
-       function getPeso: real;
+       function getImc: real;
+
 
      destructor destrua_se;
 
@@ -39,19 +40,20 @@ begin
 
 end;
 
-function ClassPrin.getAltura: real;
+function ClassPrin.getImc: real;
 begin
-   result:= altura;
+  imc:= peso/(altura*altura);
+  result:= imc;
 end;
 
-function ClassPrin.getPeso: real;
+procedure ClassPrin.setAltura(pAltura: real);
 begin
-  result:= peso;
+   altura:= pAltura;
 end;
 
-procedure ClassPrin.setImc(pImc: real);
+procedure ClassPrin.setPeso(pPeso: real);
 begin
- imc:= pImc;
+  peso:= pPeso;
 end;
 
 end.

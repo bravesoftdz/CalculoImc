@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UnitClassPrin;
 
 type
   TformPrincipal = class(TForm)
@@ -21,6 +21,7 @@ type
 
   private
     { Private declarations }
+    calcImc:  ClassPrin;
   public
     { Public declarations }
   end;
@@ -34,13 +35,15 @@ implementation
 
 {$R *.dfm}
 
-uses UnitClassPrin;
 
 
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
-
-
+  calcImc:= ClassPrin.calculaImc;
+  calcImc.setAltura(strToFloat(edtAltura.Text));
+  calcImc.setPeso(strToFloat(edtPeso.Text));
+  pnlImc.Caption:= FormatFloat('###,###,##0.00', calcImc.getImc);
+  calcImc.destrua_se;
 
 
 //PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
