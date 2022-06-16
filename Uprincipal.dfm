@@ -22,24 +22,30 @@ object formPrincipal: TformPrincipal
     Caption = 'Sua Altura'
   end
   object Label2: TLabel
-    Left = 56
-    Top = 109
+    Left = 200
+    Top = 37
     Width = 44
     Height = 13
     Caption = 'Seu Peso'
   end
   object Label3: TLabel
-    Left = 191
-    Top = 60
+    Left = 175
+    Top = 61
     Width = 3
     Height = 13
   end
   object Label4: TLabel
-    Left = 191
-    Top = 82
-    Width = 19
-    Height = 13
+    Left = 162
+    Top = 96
+    Width = 37
+    Height = 23
     Caption = 'IMC'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
   end
   object edtAltura: TEdit
     Left = 56
@@ -49,8 +55,8 @@ object formPrincipal: TformPrincipal
     TabOrder = 0
   end
   object edtPeso: TEdit
-    Left = 56
-    Top = 128
+    Left = 200
+    Top = 56
     Width = 121
     Height = 21
     TabOrder = 1
@@ -73,12 +79,26 @@ object formPrincipal: TformPrincipal
     TabOrder = 3
   end
   object PnlImc: TPanel
-    Left = 191
-    Top = 101
+    Left = 130
+    Top = 125
     Width = 106
     Height = 22
     Color = clHighlightText
     ParentBackground = False
     TabOrder = 4
+  end
+  object ACBrMail1: TACBrMail
+    Host = 'smtp.gmail.com'
+    Port = '587'
+    Username = 'contato.rafaelzaap@gmail.com'
+    Password = 'xmctbk1003bmz'
+    SetSSL = False
+    SetTLS = True
+    Attempts = 3
+    From = 'rafael.zaap@gmail.com'
+    FromName = 'Rafael Silva'
+    DefaultCharset = UTF_8
+    IDECharset = CP1252
+    Left = 344
   end
 end

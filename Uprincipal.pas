@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UnitClassPrin,
+  ACBrBase, ACBrMail;
 
 type
   TformPrincipal = class(TForm)
@@ -17,17 +18,19 @@ type
     Button1: TButton;
     Button2: TButton;
     PnlImc: TPanel;
+    ACBrMail1: TACBrMail;
     procedure Button1Click(Sender: TObject);
 
   private
     { Private declarations }
+    calcImc:  ClassPrin;
   public
     { Public declarations }
   end;
 
 var
   formPrincipal: TformPrincipal;
-  peso, altura, imc: real;
+
 
 
 implementation
@@ -35,16 +38,14 @@ implementation
 {$R *.dfm}
 
 
+
 procedure TformPrincipal.Button1Click(Sender: TObject);
 begin
-
-
-altura := strToFloat (edtAltura.Text);
-peso := strToFloat (edtPeso.Text);
-
-imc := peso / (altura * altura);
-
-PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
+  calcImc:= ClassPrin.calculaImc;
+  calcImc.setAltura(strToFloat(edtAltura.Text));
+  calcImc.setPeso(strToFloat(edtPeso.Text));
+  pnlImc.Caption:= FormatFloat('###,###,##0.00', calcImc.getImc);
+  calcImc.destrua_se;
 
 
 
