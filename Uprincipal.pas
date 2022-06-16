@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UnitClassPrin;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UnitClassPrin,
+  ACBrBase, ACBrMail;
 
 type
   TformPrincipal = class(TForm)
@@ -17,6 +18,7 @@ type
     Button1: TButton;
     Button2: TButton;
     PnlImc: TPanel;
+    ACBrMail1: TACBrMail;
     procedure Button1Click(Sender: TObject);
 
   private
@@ -44,9 +46,6 @@ begin
   calcImc.setPeso(strToFloat(edtPeso.Text));
   pnlImc.Caption:= FormatFloat('###,###,##0.00', calcImc.getImc);
   calcImc.destrua_se;
-
-
-//PnlImc.Caption:= FormatFloat('###,###,##0.00', imc);
 
 
 

@@ -35,11 +35,17 @@ object formPrincipal: TformPrincipal
     Height = 13
   end
   object Label4: TLabel
-    Left = 178
-    Top = 106
-    Width = 19
-    Height = 13
+    Left = 162
+    Top = 96
+    Width = 37
+    Height = 23
     Caption = 'IMC'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
   end
   object edtAltura: TEdit
     Left = 56
@@ -80,5 +86,19 @@ object formPrincipal: TformPrincipal
     Color = clHighlightText
     ParentBackground = False
     TabOrder = 4
+  end
+  object ACBrMail1: TACBrMail
+    Host = 'smtp.gmail.com'
+    Port = '587'
+    Username = 'contato.rafaelzaap@gmail.com'
+    Password = 'xmctbk1003bmz'
+    SetSSL = False
+    SetTLS = True
+    Attempts = 3
+    From = 'rafael.zaap@gmail.com'
+    FromName = 'Rafael Silva'
+    DefaultCharset = UTF_8
+    IDECharset = CP1252
+    Left = 344
   end
 end
